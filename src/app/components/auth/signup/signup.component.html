@@ -1,0 +1,57 @@
+<div class="signup signin">
+
+  <div class="title">
+    <h1>S'inscrire</h1>
+  </div>
+  <form [formGroup]="signUpForm">
+    <div class="info">
+
+      <div class="firstname">
+        <input type="text" name="firstname" placeholder="Your firstname..." [formControl]="firstname" />
+        <div class="error" *ngIf="firstname.dirty && !firstname.valid">
+          <p *ngIf="firstname.hasError('required')"> Oups le prénom est obligatoire</p>
+          <p *ngIf="firstname.hasError('minlength')"> Doit contenir au moins 3 lettres</p>
+        </div>
+      </div>
+
+
+      <div class="lastname">
+        <input type="text" name="lastname" placeholder="Your lastname..." [formControl]="lastname" />
+        <div class="error" *ngIf="firstname.dirty && !firstname.valid">
+          <p *ngIf="lastname.hasError('required')"> Oups le nom est obligatoire</p>
+          <p *ngIf="lastname.hasError('minlength')"> Doit contenir au moins 3 lettres</p>
+        </div>
+      </div>
+    </div>
+    <div class="email column flex">
+      <input type="email" name="email" placeholder="Email" [formControl]="email" />
+      <div class="error" *ngIf="email.dirty && !email.valid">
+        <p *ngIf="email.hasError('required')"> L'email est obligatoire</p>
+        <p *ngIf="!email.hasError('required')"> Le format de votre email est incorrect</p>
+      </div>
+    </div>
+
+    <div class="password ">
+      <div>
+        <input type="password" name="password" placeholder="Password" [formControl]="password" />
+        <div class="error" *ngIf="password.dirty && !password.valid">
+          <p *ngIf="password.hasError('required')"> Le mot de passe recquis</p>
+          <p *ngIf="password.hasError('minlength')"> Le mot de passe doit contenir au moins 6 caractères</p>
+        </div>
+      </div>
+      <div>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" [formControl]="confirmPassword" />
+        <div class="error" *ngIf="!passwordsMatch() && confirmPassword.dirty">
+          <p> Les mots de passe ne correspondent pas</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      {{user | json}}
+    </div>
+
+    <button class="button" (click)="onSubmit()">S'inscrire</button>
+  </form>
+
+</div>

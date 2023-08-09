@@ -1,0 +1,18 @@
+<div class="modal-product-view">
+  <div class="overlay"></div>
+  <div class="modal-product-view-container flex">
+    <div class="modal-product-view-image flex-1">
+      <img class="image-product" [src]="card ? card.imageUrl[0] : 'aucune image'" [alt]="">
+    </div>
+    <div class="modal-product-view-details flex-1">
+      <h2 class="modal-product-view-title">{{card?.name}}</h2>
+      <div class="modal-product-view-price">
+        <h4> {{ (card?.sold_price || 0)/100 | currency : "EUR" }} € - <del>{{(card?.regular_price || 0)/100 | currency : "EUR"}}</del> </h4>
+      </div>
+      <div class="modal-product-view-date">
+        <h4>Publié le {{card?.created_at | date:"dd/MM/YYYY"}}</h4>
+      </div>
+      <button class="modal-product-view-button" (click)="closeModal()">X</button>
+    </div>
+  </div>
+</div>

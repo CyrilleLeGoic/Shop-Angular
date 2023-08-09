@@ -1,0 +1,92 @@
+.signup {
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.signup input {
+
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: large;
+  padding: 10px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+}
+
+.info input {
+  flex: 1;
+}
+
+.email {
+  width: 100%;
+  display: flex; /* Ajout de cette ligne */
+}
+
+.email input {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+
+.password {
+  width: 100%;
+  display: flex; /* Ajout de cette ligne */
+}
+
+.button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: black;
+  color : white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+  .info{
+    flex-direction: column;
+  }
+  .email {
+    flex-direction: column;
+  }
+  .password {
+    flex-direction: column;
+  }
+  .signup {
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  .signup input {
+    min-width: 60%;
+  }
+
+
+
+
+}
+

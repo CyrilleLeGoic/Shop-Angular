@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: 'Agdasima', sans-serif;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+
+.aic{
+  align-items: center;
+}
+
+.jcc{
+  justify-content: center;
+}
+
+.column{
+  flex-direction: column;
+}
+
+/*** SINGLE PRODUCT ***/
+
+.content{
+  width : 80%;
+  margin: 0 auto;
+  min-width : 70vh;
+}
+
+/** ADDITIONAL INFO **/
+
+table {
+  border : 0.1px solid black;
+  margin : 0 auto;
+  padding : 1rem
+}
+
+table th,
+table td {
+  border : 0.1px solid black;
+  padding : 10px;
+  border-collapse: collapse;
+}
+
+.vendor-name h6{
+  font-size : 1.5rem;
+  font-weight : bold;
+  text-align : center;
+  margin-bottom : 1rem;
+}
+
+.vendor-name h6 a {
+  text-decoration: none;
+  color : #562fe3;
+}
+
+.thumb {
+  display : flex;
+  justify-content : center;
+  flex-direction: column;
+  align-items : center;
+  margin-bottom : 1rem;
+  gap : 10px;
+}
+.row {
+  display : flex;
+  gap : 50px;
+}
+
+.thumb img {
+  width : 80px;
+  border-radius: 200px;
+}
+
+/** COMMENTS **/
+.single-comment{
+
+  margin : 20px 0;
+}
+.single-comment .user {
+  gap : 10px;
+  padding : 10px 10px;
+  border : 0.1px solid #ccc;
+}
+
+.single-comment .user .desc {
+  max-width : 500px
+}
+
+.single-comment .desc span {
+  font-size : 1.2rem;
+  font-weight : bold;
+  margin-bottom: 1rem;
+}
+.single-comment .thumb a {
+  text-decoration: none;
+  color : #562fe3;
+  font-weight: bolder;
+  margin : 0 10px;
+}
+
+.comments-area h4 {
+  font-size : 1.5rem;
+  font-weight : bold;
+  margin-bottom : 1rem;
+}
+
+.comments-area > .row div:nth-child(2) {
+  flex : 1;
+}
+
+.comments-area > .row div:nth-child(2) .progress{
+  display : flex;
+  gap : 10px;
+  margin-bottom : 10px;
+}
+
+.comments-area > .row div:nth-child(2) .progress .progress-bar {
+  flex:1
+}
+
+.progress-bar {
+  width: 100%;
+  background-color:#562fe3;
+  font-weight: bold;
+  padding : 2px 10px;
+  color : white
+}
+
+h6{
+  font-size : 1rem;
+  font-weight : bold;
+  margin-bottom : 1rem;
+}
+

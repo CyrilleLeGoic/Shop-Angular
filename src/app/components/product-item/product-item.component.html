@@ -1,0 +1,21 @@
+<div class="product-item">
+  <div class="product-image">
+    <img [src]="card ? card.imageUrl[0] :''" alt="{{card?.description}}" height="300" width="300">
+  </div>
+  <div class="product-details">
+    <div class="product-name">
+      <h2>{{card?.name?.substring(0,40)}} {{ card && card.name[41] ? "..." : null}}</h2>
+    </div>
+    <div class="product-price">
+      <h3>{{ (card?.sold_price || 0)/100}} €</h3> - <del>
+        <h3>{{(card?.regular_price||0)/100}} €</h3>
+      </del>
+    </div>
+    <div class="allButtons">
+      <a [routerLink]="['product', card?.slug]">
+        <button class="buyButton">Details</button>
+      </a>
+      <button class="buyButton" (click)="handleClickProduct(card)">Quick View</button>
+    </div>
+  </div>
+</div>

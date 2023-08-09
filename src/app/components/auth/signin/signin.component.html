@@ -1,0 +1,27 @@
+<div class="signup signin">
+  <div class="title">
+    <h1>Se connecter</h1>
+  </div>
+  <form [formGroup]="signInForm">
+    <div class="email">
+      <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      [formControl]="email" />
+    </div>
+    <div class="error" *ngIf="email.dirty && !email.valid">
+      <p *ngIf="email.hasError('required')"> L'email est obligatoire</p>
+      <p *ngIf="!email.hasError('required')"> Le format de votre email est incorrect</p>
+    </div>
+    <div class="password">
+      <input type="password" name="password" placeholder="Password" [formControl]="password" />
+    </div>
+    <div class="error" *ngIf="password.dirty && !password.valid">
+      <p *ngIf="password.hasError('required')"> Le mot de passe recquis</p>
+      <p *ngIf="password.hasError('minlength')"> Le mot de passe doit contenir au moins 6 caractères</p>
+    </div>
+    <button class="button-signin" [disabled]="!signInForm.valid" (click)="onSubmit()">Connexion</button>
+    <p>{{user | json}}</p>
+  </form>
+</div>

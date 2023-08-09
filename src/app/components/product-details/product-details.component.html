@@ -1,0 +1,62 @@
+<app-loading *ngIf="isLoading"></app-loading>
+
+<div class="container">
+<div *ngIf="!isLoading" class="single-product flex content">
+  <div class="single-product-image flex-1 ">
+
+    <div class="single-product-image-list">
+      <img (click)="handleChangeCurrentImage(image)" *ngFor="let image of product?.imageUrl" class="img-list current"
+        [src]="image" alt="{{product?.description}}" [ngClass]="{'current': currentImage === image}">
+    </div>
+
+    <div class="single-product-image-current">
+      <img class="img" [src]="currentImage" height="300" width="300">
+    </div>
+
+
+  </div>
+  <div class="single-product-details flex-1">
+    <div class="single-product-name">
+      <h2>{{product?.name}}</h2>
+    </div>
+    <div class="single-product-price flex">
+      <h3>{{ (product?.sold_price || 0)/100}} €</h3> - <del>
+        <h3>{{(product?.regular_price||0)/100}} €</h3>
+      </del>
+    </div>
+    <div class="single-product-description">
+      <p>{{product?.name}}</p>
+      <h4> Publié le {{product?.created_at | date:('dd/MM/YYYY')}}</h4>
+    </div>
+
+    <button class="buyButton">Acheter</button>
+  </div>
+
+
+</div>
+
+<div class="additional content">
+  <ul class="additional-menu">
+    <li>
+      <a routerLink='description' routerLinkActive="active">Description</a>
+    </li>
+    <li>
+      <a routerLink='additional' routerLinkActive="active">Addional-info</a>
+    </li>
+
+    <li>
+      <a routerLink="reviews" routerLinkActive="active">Avis</a>
+    </li>
+    <li>
+      <a routerLink="vendor" routerLinkActive="active">Vendor</a>
+    </li>
+  </ul>
+  <div class="additional-content" *ngIf="!isLoading">
+    <div class ="details">
+    <router-outlet (activate)="handleChangeDetails($event)"></router-outlet>
+  </div>
+  </div>
+
+</div>
+</div>
+
