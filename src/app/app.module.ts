@@ -24,6 +24,7 @@ import { ProductAdditionalInfoComponent } from './components/product-tabs/produc
 import { ProductVendorComponent } from './components/product-tabs/product-vendor/product-vendor.component';
 import { ProductReviewsComponent } from './components/product-tabs/product-reviews/product-reviews.component';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
+import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 
 
 
@@ -46,6 +47,7 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     ProductVendorComponent,
     ProductReviewsComponent,
     AsideNavComponent,
+    HomeSliderComponent,
   ],
   imports: [
     BrowserModule, /* Module pour le navigateur */

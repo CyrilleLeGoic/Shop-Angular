@@ -31,19 +31,15 @@ export const ROUTES : Routes = [
     component: AccueilComponent,
     pathMatch: 'full'
   },
+
   {
     path: '',
-    component: AccueilComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'products',
     component: ProductListComponent,
     pathMatch: 'full'
   },
 
   {
-    path: 'products/product/:slug',
+    path: 'product/:slug',
     component : ProductDetailsComponent,
     pathMatch: 'prefix',
     children : [

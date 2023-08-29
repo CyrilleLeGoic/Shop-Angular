@@ -1,6 +1,7 @@
 <div class="product">
 
   <app-loading *ngIf="isLoading"></app-loading>
+  <app-home-slider></app-home-slider>
   <div class="product-list" *ngIf="!isLoading && cards.length">
     <app-product-item *ngFor="let card of cards" [card]="card"
       (displayProductViewModal)="handleDisplayProductViewModal($event)">
