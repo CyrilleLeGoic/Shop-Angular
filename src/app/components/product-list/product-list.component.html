@@ -2,7 +2,11 @@
 
   <app-loading *ngIf="isLoading"></app-loading>
   <app-home-slider></app-home-slider>
+
+  <h1 class="title">List of products :</h1>
   <div class="product-list" *ngIf="!isLoading && cards.length">
+
+
     <app-product-item *ngFor="let card of cards" [card]="card"
       (displayProductViewModal)="handleDisplayProductViewModal($event)">
     </app-product-item>
