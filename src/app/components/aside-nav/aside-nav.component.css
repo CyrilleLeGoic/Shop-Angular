@@ -1,0 +1,24 @@
+
+.aside-nav {
+  margin-top: 73px;
+  position : fixed;
+  background-color: #562fe3 ;
+  width : 300px;
+  height : 100vh;
+  padding : 20px;
+  line-height: 30px;
+  font-size: 1.4rem;
+  z-index : 90
+}
+
+.aside-nav a{
+  list-style-type: none;
+  text-decoration: none;
+  color : white;
+  margin-top: 20px;
+  line-height: 10px;
+}
+
+.aside-nav a:hover{
+  color : #ff8800;
+}

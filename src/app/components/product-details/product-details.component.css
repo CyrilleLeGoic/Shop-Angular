@@ -13,6 +13,12 @@
 
 }
 
+.block-image{
+  display : flex;
+  gap : 20px;
+  height : 100%;
+  width : 100%;}
+
 .single-product-image {
   display : flex;
   margin-right: 2rem;
@@ -106,7 +112,7 @@ del{
 }
 
 .additional {
-  min-height: 200px ;
+  min-height: 100px ;
   border : 1px solid black;
   margin-bottom: 5rem;
   padding : 5px;
@@ -170,25 +176,78 @@ del{
 
 /* gerer une media query en dessous de 650px */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1100px) {
   .single-product{
     flex-direction : column;
     height : auto;
   }
 
-  .single-product-image{
-    margin-right : 0;
-    margin-bottom : 2rem;
+  .additional{
+    height : auto;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+
   }
 
-  .single-product-details{
+  .single-product-image-list{
+    flex-direction : row;
     width : 100%;
+    height : auto;
+    overflow-x : scroll;
+    gap : 10px;
+    justify-content: center;
+  }
+
+  .additional-content{
+    width : 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block-image{
+    flex-direction : column-reverse;
+    height : auto;
+    width : 100%;
+  }
+
+
+
+
+  .block-image{
+   /*centrer image dans le conteneur*/
+    margin : auto;
+    width : 100%;
+    height : 100%;
+    object-fit : cover;
+    padding: 0 0.5rem;
+  }
+
+  .single-product-image-current img{
+    width : 70%;
+    display : block;
+    margin : auto;
+
+  }
+
+
+
+  .single-product-details{
+    display : flex;
+    width : 50%;
     gap : 20px;
+    margin: auto;
+    padding : 3rem;
+    justify-content: center;
+    text-align: center;
   }
 
   .buyButton{
-    width : 100%;
+    width : 30%;
   }
+
+
 }
 
 

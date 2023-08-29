@@ -80,4 +80,10 @@ del{
   color: red;
 }
 
+@media screen and (max-width: 1100px) {
+  .modal-product-view-container{
+   display : none;
+  }
+}
+
 

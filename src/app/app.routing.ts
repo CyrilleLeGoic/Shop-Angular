@@ -27,13 +27,23 @@ export const ROUTES : Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'blog',
+    component: AccueilComponent,
+    pathMatch: 'full'
+  },
+  {
     path: '',
+    component: AccueilComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'products',
     component: ProductListComponent,
     pathMatch: 'full'
   },
 
   {
-    path: 'product/:slug',
+    path: 'products/product/:slug',
     component : ProductDetailsComponent,
     pathMatch: 'prefix',
     children : [

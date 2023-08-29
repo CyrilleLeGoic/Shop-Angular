@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Subscription } from 'rxjs';
+import { auth_items, nav_items } from 'src/app/api/nav';
+import { Item } from 'src/app/models/item';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +17,11 @@ export class HeaderComponent implements OnInit, OnDestroy  {
   dataSub : Subscription | undefined
   interv : Number | undefined
   intervSub : Subscription | undefined
+  navs : Item[] | undefined = nav_items
+  auth : Item[] | undefined = auth_items
+  isDisplayMenu : boolean = false;
+
+
 
   constructor(
     private productService : ProductService
@@ -25,30 +32,14 @@ export class HeaderComponent implements OnInit, OnDestroy  {
     this.intervSub?.unsubscribe();
   }
 
-  ngOnInit(): void {
-   /* this.dataSub = this.productService.getNumber().subscribe({
-      next: (value : Number) => {
-        this.data = value;
-      },
-      error : (error : any) => {
-        console.log(error);
-      },
-      complete : () => {
-        console.log('complete');
-      }
-    })
-*/
+  onClickDisplayMenu() {
+    this.isDisplayMenu = !this.isDisplayMenu;
+  }
 
-   /* this.intervSub = this.productService.getSecond().subscribe({
-      next: (value : Number) => {
-        this.interv = value;
-      },
-      error: (error : any) => {
-        console.log(error);
-      },
-      complete: () => {
-        console.log('complete');
-      }
-    })*/
+  handleCloseMobileNav() {
+    this.isDisplayMenu = false;
+  }
+
+  ngOnInit(): void {
   }
 }

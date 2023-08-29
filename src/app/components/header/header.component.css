@@ -73,6 +73,7 @@ a{
 
   .bars img {
     width : 30px;
+    cursor: pointer;
   }
 
   header .bars {

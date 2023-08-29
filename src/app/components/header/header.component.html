@@ -1,7 +1,7 @@
 <header class="header">
   <div class="bars none">
-    <a routerLink="">
-      <img src="/assets/images/icons/bars.png" alt="">
+    <a>
+      <img src="/assets/images/icons/bars.png"  alt="" (click)="onClickDisplayMenu()">
     </a>
   </div>
   <div class="title logo">
@@ -10,14 +10,21 @@
 
   <div class="list-item">
     <ul class="list">
-      <li>
-        <a class="item" routerLink="/">Home</a>
-        <a class="item" routerLink="/">Blog</a>
 
-        <a class="item btn btn-signup" routerLink="/signup">Sign Up</a>
-        <a class="item btn btn-signin" routerLink="/signin">Sign In</a>
-
+      <li *ngFor="let item of navs" >
+        <a class="item" routerLink="{{item?.path}}">{{item?.name}}</a>
       </li>
+
+      <li *ngFor="let item of auth">
+        <a class="item btn btn-signup" routerLink="{{item?.path}}">{{item?.name}}</a>
+      </li>
+
+
     </ul>
   </div>
 </header>
+
+<app-aside-nav
+(close)="handleCloseMobileNav()"
+*ngIf="isDisplayMenu"></app-aside-nav>
+
