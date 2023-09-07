@@ -1,18 +1,17 @@
 <div class="product">
 
   <app-loading *ngIf="isLoading"></app-loading>
-  <app-home-slider></app-home-slider>
-
-  <h1 class="title">List of products :</h1>
-  <div class="product-list" *ngIf="!isLoading && cards.length">
 
 
-    <app-product-item *ngFor="let card of cards" [card]="card"
+  <div class="product-list" *ngIf="!isLoading && products.length">
+
+
+    <app-product-item *ngFor="let card of products" [card]="card"
       (displayProductViewModal)="handleDisplayProductViewModal($event)">
     </app-product-item>
   </div>
 
-  <div class="bar" *ngIf="!isLoading && !cards.length">
+  <div class="bar" *ngIf="!isLoading && !products.length">
     Désolé, aucun produit ne correspond à votre recherche.
   </div>
 

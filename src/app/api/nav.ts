@@ -5,6 +5,10 @@ export const nav_items : Item[] = [
     name: 'Home',
     path : '/',
   },
+  {
+    name: 'Products',
+    path : '/products',
+  },
 
 
 ];

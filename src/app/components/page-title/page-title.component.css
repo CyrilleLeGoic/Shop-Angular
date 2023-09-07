@@ -1,0 +1,10 @@
+.page-title
+{
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color : #562fe3;
+  height : 100px;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}

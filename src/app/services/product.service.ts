@@ -3,6 +3,7 @@ import { Card } from '../models/card';
 import { Observable, interval, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { ResultRequest } from '../models/resultRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ProductService {
 
   private products : Card[] = []
 
-  private urlApi : string = environment.serverUrl;
+  private urlApi : string = environment.serverUrl.products;
 
   constructor( private http: HttpClient) {}
 
@@ -36,8 +37,8 @@ export class ProductService {
     DELETE pour supprimer des données du serveur
     */
 
-  getProducts(): Observable<Card[]>{
-    return this.http.get<Card[]>(this.urlApi)
+  getProducts(): Observable<ResultRequest<Card>>{
+    return this.http.get<ResultRequest <Card>>(this.urlApi)
   }
 
 

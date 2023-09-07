@@ -4,6 +4,7 @@ import { Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Subscription } from 'rxjs';
+import { ResultRequest } from 'src/app/models/resultRequest';
 
 @Component({
   selector: 'app-product-details',
@@ -29,8 +30,8 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.slug = this.route.snapshot.params['slug']
     this.productSub = this.productService.getProducts().subscribe({
-      next: (products : Card[]) => {
-        this.product = products.find((product) => product.slug === this.slug)
+      next: (products : ResultRequest<Card>) => {
+        this.product = products.results.find((product) => product.slug === this.slug)
         this.isLoading = false;
         this.currentImage = this.product?.imageUrl[0]
       },

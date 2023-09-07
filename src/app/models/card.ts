@@ -1,3 +1,5 @@
+import { Category } from "./category";
+
 export interface Card {
   _id: string;
   slug?: string;
@@ -9,8 +11,7 @@ export interface Card {
   color? : string[];
   size?: string[];
   stock?: string;
-
-  category: string[];
+  categories: Category[];
   imageUrl: string[];
   sold_price: number;
   regular_price: number;

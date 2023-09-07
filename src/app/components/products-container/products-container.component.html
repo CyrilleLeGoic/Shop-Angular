@@ -1,0 +1,27 @@
+
+
+<div class="products-container">
+
+  <div class="product-category">
+    <ul class="unlisted">
+      <li *ngFor="let item of categories">
+        <a href=""
+        [ngClass]="{'active':item.slug ===currentCategory?.slug}"
+        (click)="handleClick($event, item)"
+        >{{item.name}}</a>
+      </li>
+
+
+
+    </ul>
+  </div>
+  <div class="product-list">
+    <app-page-title class ="title" title="{{currentCategory?.name}}"></app-page-title>
+    <app-product-list
+  [products]="affichage"
+  [isLoading]="isLoading"
+></app-product-list>
+
+
+  </div>
+</div>

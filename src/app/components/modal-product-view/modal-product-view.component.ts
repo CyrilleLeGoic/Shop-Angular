@@ -9,6 +9,7 @@ import { Card } from '../../models/card';
 export class ModalProductViewComponent {
 
   @Input() card: Card | undefined;
+  @Input() product : Card | undefined; //cdscsd
   @Output() close: EventEmitter<string> = new EventEmitter<string>();
 
   closeModal() {

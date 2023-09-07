@@ -9,12 +9,14 @@ import { ProductDescriptionComponent } from './components/product-tabs/product-d
 import { ProductReviewsComponent } from './components/product-tabs/product-reviews/product-reviews.component';
 import { ProductAdditionalInfoComponent } from './components/product-tabs/product-additional-info/product-additional-info.component';
 import { ProductVendorComponent } from './components/product-tabs/product-vendor/product-vendor.component';
+import { ProductsContainerComponent } from './components/products-container/products-container.component';
 
 export const ROUTES : Routes = [
   {
     path: '',
     component: ContainerComponent,
-    children: [
+    pathMatch: 'full',
+  },
 
     {
     path: 'signin',
@@ -29,6 +31,11 @@ export const ROUTES : Routes = [
   {
     path: 'blog',
     component: AccueilComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'products',
+    component: ProductsContainerComponent,
     pathMatch: 'full'
   },
 
@@ -69,5 +76,3 @@ export const ROUTES : Routes = [
     ]
   }
 ]
-  }
-];

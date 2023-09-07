@@ -1,8 +1,9 @@
-
-
 <div class="container">
-
-<router-outlet></router-outlet>
+<app-home-slider></app-home-slider>
+<app-product-list
+  [products]="products"
+  [isLoading]="isLoading"
+></app-product-list>
 
 
 </div>
