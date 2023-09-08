@@ -1,0 +1,103 @@
+.title{
+  margin-top: 4.3rem ;
+
+}
+
+.subtitle{
+  margin-top:6rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-container
+{
+    display : flex;
+    min-height: 80vh;
+    width : 100%;
+}
+
+.contact-container form{
+  padding-top: 50px;
+  width : 100%;
+  margin : 0 auto;
+}
+
+.contact-container form{
+  padding-top: 50px;
+  width : 500px;
+  margin : 0 auto;
+}
+
+.form-line {
+  display: flex;
+  margin-bottom: 10px;
+  gap : 20px;
+  width : 100%;
+}
+
+.form-line input{
+  width : 100%;
+  height : 40px;
+  border-radius: 10px;
+  padding : 0 10px;
+  /*bordure fine */
+  border : 1px solid #ccc;
+}
+
+
+.text-area{
+  width : 100%;
+}
+
+
+.form-textarea textarea{
+  width : 100%;
+  height : 100px;
+  border-radius: 10px;
+  border : 1px solid #ccc;
+}
+
+.form-textarea ::placeholder{
+  padding : 10px;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.btn {
+  background-color: #562fe3;
+  color : white;
+  border : none;
+  border-radius: 10px;
+  padding : 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.btn:hover{
+  background-color: #ff8800;
+}
+
+
+
+
+
+.error {
+  margin-bottom: 1rem;
+  color : red;
+  font-size: 1rem;
+
+}
+
+
+
+
+
+

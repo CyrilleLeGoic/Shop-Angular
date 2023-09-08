@@ -27,6 +27,8 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { Page404Component } from './components/page404/page404.component';
 
 
 
@@ -52,6 +54,8 @@ import { PageTitleComponent } from './components/page-title/page-title.component
     HomeSliderComponent,
     ProductsContainerComponent,
     PageTitleComponent,
+    ContactComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule, /* Module pour le navigateur */

@@ -10,12 +10,24 @@ import { ProductReviewsComponent } from './components/product-tabs/product-revie
 import { ProductAdditionalInfoComponent } from './components/product-tabs/product-additional-info/product-additional-info.component';
 import { ProductVendorComponent } from './components/product-tabs/product-vendor/product-vendor.component';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { Page404Component } from './components/page404/page404.component';
 
 export const ROUTES : Routes = [
   {
     path: '',
     component: ContainerComponent,
     pathMatch: 'full',
+  },
+  {
+    path: 'products',
+    component: ProductsContainerComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    pathMatch: 'full'
   },
 
     {
@@ -33,18 +45,6 @@ export const ROUTES : Routes = [
     component: AccueilComponent,
     pathMatch: 'full'
   },
-  {
-    path: 'products',
-    component: ProductsContainerComponent,
-    pathMatch: 'full'
-  },
-
-  {
-    path: '',
-    component: ProductListComponent,
-    pathMatch: 'full'
-  },
-
   {
     path: 'product/:slug',
     component : ProductDetailsComponent,
@@ -74,5 +74,10 @@ export const ROUTES : Routes = [
 
 
     ]
-  }
+  },
+  {
+    path: '**',
+    component: Page404Component,
+    pathMatch: 'full'
+  },
 ]

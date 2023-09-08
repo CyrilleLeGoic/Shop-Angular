@@ -9,9 +9,12 @@
   background-color: green;
   color: white;
   font-size: 0.6rem;
-  border-bottom: solid 3px black;
   position : fixed;
   background-color: #562fe3;
+  /* ajouter une ombre douce en bas */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 9999;
+
 
 }
 

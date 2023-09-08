@@ -9,6 +9,10 @@ export const nav_items : Item[] = [
     name: 'Products',
     path : '/products',
   },
+  {
+    name: 'Contact',
+    path : '/contact',
+  },
 
 
 ];

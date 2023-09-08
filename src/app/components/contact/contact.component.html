@@ -1,0 +1,50 @@
+<div class="title">
+  <app-page-title class="title" title="Besoin de notre aide ?"></app-page-title>
+</div>
+
+<h2 class ='subtitle'>Envoyez-nous votre message</h2>
+
+<div class="contact-container content">
+  <form action="" method ="post" [formGroup]="formMessage">
+
+    <div class="form-line">
+      <input type="text" name="name" id="name" placeholder="Nom" [formControl]="name">
+      <input type="email" name="email" id="email" placeholder="Email" [formControl]="email">
+    </div>
+    <div class="error" *ngIf="name.dirty && !name.valid">
+      <p *ngIf="name.hasError('required')"> Le nom est obligatoire</p>
+      <p *ngIf="!name.hasError('required')"> 3 caractères minimum</p>
+    </div>
+    <div class="error" *ngIf="email.dirty && !email.valid">
+      <p *ngIf="email.hasError('required')"> L'email est obligatoire</p>
+      <p *ngIf="!email.hasError('required')"> Le format de l'email est inccorecte</p>
+    </div>
+
+    <div class="form-line">
+      <input type="tel" name="phone" id="phone" placeholder="Téléphone" [formControl]="phone">
+      <input type="text" name="subject" id="subject" placeholder="Sujet" [formControl]="subject">
+    </div>
+    <div class="error" *ngIf="phone.dirty && !phone.valid">
+      <p *ngIf="phone.hasError('required')"> Le téléphone est obligatoire</p>
+      <p *ngIf="!phone.hasError('required')"> 10 chiffres</p>
+    </div>
+    <div class="error" *ngIf="subject.dirty && !subject.valid">
+      <p *ngIf="subject.hasError('required')"> Le sujet est obligatoire</p>
+      <p *ngIf="!subject.hasError('required')"> Le sujet doit contenir 15 caractères minimum</p>
+    </div>
+
+    <div class="form-textarea">
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" [formControl]="message"></textarea>
+    </div>
+    <div class="error" *ngIf="message.dirty && !message.valid">
+      <p *ngIf="message.hasError('required')"> Le message est obligatoire</p>
+      <p *ngIf="!message.hasError('required')"> Le message doit contenir 30 caractères minimum</p>
+    </div>
+
+    <div class="form-button">
+      <button class="btn" type="submit" (click)="onSubmit()">Envoyer</button>
+    </div>
+
+
+  </form>
+</div>
